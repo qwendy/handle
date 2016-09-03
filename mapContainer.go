@@ -12,8 +12,8 @@ type mapContainer struct {
 	c map[int]acMap
 }
 
-// NewmapContainer 使用map作为存储用户活动返回的手机号码状态的容器
-func NewmapContainer() Container {
+// NewMapContainer 使用map作为存储用户活动返回的手机号码状态的容器
+func NewMapContainer() Container {
 	return &mapContainer{
 		c: make(map[int]acMap),
 	}

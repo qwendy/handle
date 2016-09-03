@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-)za
+)
 
 // YiMeiXMLParser 解析亿美回执的结构体
 type YiMeiXMLParser struct {
@@ -32,7 +32,9 @@ func NewYiMeiXML(method int) XMLParser {
 	var container Container
 	switch method {
 	case 1:
-		container = NewmapContainer()
+		container = NewMapContainer()
+	case 2:
+		container = NewRidesContainer()
 	}
 	return &YiMeiXMLParser{
 		// data:      &YiMeiXMLData{},
